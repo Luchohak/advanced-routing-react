@@ -7,19 +7,57 @@ function MainNavigation() {
       <nav>
         <ul className={classes.list}>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+              end
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/events">Events</NavLink>
+            <NavLink
+              to="/events"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+              end
+            >
+              Events
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/events/:id">Event detail</NavLink>
+            <NavLink
+              to="/events/:id"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+              end
+            >
+              Event detail
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/events/new">New Event</NavLink>
+            <NavLink
+              to="/events/new"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+            >
+              New Event
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/events/:id/edit">Edit event</NavLink>
+            <NavLink
+              to="/events/:id/edit"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+            >
+              Edit event
+            </NavLink>
           </li>
         </ul>
       </nav>
