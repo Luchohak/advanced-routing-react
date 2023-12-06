@@ -1,4 +1,5 @@
-import classes from './MainNavigation.module.css';
+import { NavLink } from "react-router-dom";
+import classes from "./MainNavigation.module.css";
 
 function MainNavigation() {
   return (
@@ -6,10 +7,19 @@ function MainNavigation() {
       <nav>
         <ul className={classes.list}>
           <li>
-            <a>Home</a>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <a>Events</a>
+            <NavLink to="/events">Events</NavLink>
+          </li>
+          <li>
+            <NavLink to="/events/:id">Event detail</NavLink>
+          </li>
+          <li>
+            <NavLink to="/events/new">New Event</NavLink>
+          </li>
+          <li>
+            <NavLink to="/events/:id/edit">Edit event</NavLink>
           </li>
         </ul>
       </nav>
