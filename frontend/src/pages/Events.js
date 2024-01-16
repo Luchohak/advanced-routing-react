@@ -11,11 +11,13 @@ function EventsPage() {
   return (
     <>
       <h1>This is the list of events</h1>
-      {EVENTS.map((event) => (
-        <li key={event.id}>
-          <Link to="">{event.title}</Link>
-        </li>
-      ))}
+      <ul>
+        {EVENTS.map((event) => (
+          <li key={event.id}>
+            <Link to={event.id}>{event.title}</Link>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
